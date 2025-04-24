@@ -8,8 +8,14 @@ from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.default import DefaultBotProperties
 from aiogram.types import Message, CallbackQuery, ReplyKeyboardMarkup, KeyboardButton
-from dotenv import load_dotenv
+from environs import Env
 
+env = Env()
+env.read_env() # Пытается прочитать .env для локальной разработки
+
+# Пример получения токена в bot.py
+# bot_token = os.getenv("API_TOKEN") -> заменяем на:
+bot_token = env.str("API_TOKEN")
 # Импортируем роутеры и общие хендлеры
 from handlers import bus, trolleybus, favorites, common_handlers
 import utils # Нужен для инициализации данных при старте
@@ -17,10 +23,7 @@ import utils # Нужен для инициализации данных при 
 # Настройка логирования для отладки
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(name)s - %(message)s')
 
-load_dotenv()
-
 # --- Инициализация ---
-bot_token = os.getenv("API_TOKEN")
 if not bot_token:
     logging.critical("API_TOKEN environment variable not set!")
     raise ValueError("Необходимо установить переменную окружения API_TOKEN")
