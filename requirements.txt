@@ -9,14 +9,17 @@ beautifulsoup4==4.13.4
 bs4==0.0.2
 certifi==2025.1.31
 charset-normalizer==3.4.1
+environs==14.1.1
 frozenlist==1.6.0
 idna==3.10
 lxml==5.4.0
 magic-filter==1.0.12
+marshmallow==4.0.0
 multidict==6.4.3
 propcache==0.3.1
 pydantic==2.11.3
 pydantic_core==2.33.1
+python-dotenv==1.1.0
 requests==2.32.3
 setuptools==79.0.1
 soupsieve==2.7
