@@ -1,0 +1,4 @@
+API_TOKEN=1100070752:AAFXM3XhPDywzkJ7WeWYq7UajubA0PBN3t8
+BUS_SCHEDULE_PATH=data/bus_schedule.json
+TROLLEYBUS_SCHEDULE_PATH=data/trolleybus_schedule.json
+FAVORITES_PATH=data/favorites.json
