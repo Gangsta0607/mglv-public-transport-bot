@@ -1,0 +1,6 @@
+aiogram
+bs4
+lxml
+python-dotenv
+certifi
+requests
